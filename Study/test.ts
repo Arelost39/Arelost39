@@ -15,6 +15,6 @@ class Employee extends Person {
     }
 }
 
-let Max: Employee = new Employee("Max");
+let Baka: Employee = new Employee("Max");
 
-Max.print();
+Baka.print();
