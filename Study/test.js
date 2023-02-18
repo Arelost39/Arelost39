@@ -24,13 +24,16 @@ var Person = /** @class */ (function () {
 }());
 var Employee = /** @class */ (function (_super) {
     __extends(Employee, _super);
-    function Employee() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Employee(name, company) {
+        var _this = _super.call(this, name) || this;
+        _this.company = company;
+        return _this;
     }
-    Employee.prototype.work = function () {
-        console.log("".concat(this.name, " \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0432 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438 ").concat(this.company));
+    Employee.prototype.print = function () {
+        _super.prototype.print.call(this);
+        console.log("\u0420\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0432 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438 ".concat(this.company));
     };
     return Employee;
 }(Person));
-var Max = new Employee("Max");
-Max.print();
+var Baka = new Employee("Max", "FSO");
+Baka.print();
